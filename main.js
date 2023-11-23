@@ -168,7 +168,7 @@ const loadForecastUsingGeoLocation = () => {
         const { latitude: lat, longitude: lon } = coords;
         selectedCity = { lat, lon };
         loadData();
-    }, error => console.log(error))
+    }, error => {})
 }
 
 
@@ -215,10 +215,10 @@ const onsearchChange = async (event) => {
 
 
 const handleCitySelection = (event) => {
-    console.log(event)
+    
     selectedCityText = event.target.value
     let options = document.querySelectorAll("#cities > option")
-    console.log(options)
+    
     if (options?.length) {
         // console.log(options)
         let selectedOption = Array.from(options).find(opt => opt.value === selectedCityText);

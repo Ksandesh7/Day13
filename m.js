@@ -121,7 +121,7 @@ const loadForecastUsingGeoLocation = () => {
         const { latitude: lat, longitude: lon } = coords;
         selectedCity = { lat, lon };
         loadData();
-    }, error => console.log(error))
+    }, error => {})
 }
 
 const loadData = async () => {
